@@ -1,0 +1,84 @@
+Sqlkodu = New SqlCommand("Create Table Country (ID int identity(1,1) Not Null, Lokasyonid nvarchar(50), Turkey bit, Turkey-Inverse bit, Bulgaria bit, Chile bit, France bit, Venezuela bit, Denmark bit, Georgia bit, Germany bit, numerical_6-digit bit, numerical_8-digit bit)", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloAbone (ID int identity(1,1) Not Null, Plaka nvarchar(50), Adi nvarchar(50), Soyadi nvarchar(50), Gsm nvarchar(50), Marka nvarchar(50), Model nvarchar(50), Renk nvarchar(50), Grupadi nvarchar(50), Blok nvarchar(50), Daire nvarchar(50), Cinsiyet nvarchar(50), Bilgi nvarchar(Max), Kayiteden nvarchar(50), Tarihsaat datetime, Grupid int, Songiriscikis int, Songecistarihi datetime, Songeciskameraid int, Baslangictarihi datetime, Bitistarihi datetime, Yeniabone bit, Ozelucretsizdakika int)", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloAboneFiyat (ID int identity(1,1) Not Null, Tanimadi nvarchar(50), Sure int, Fiyat decimal(18,2), Bilgi nvarchar(50), Zamandilimi int, Gunluk decimal(18,15))", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloAboneiade (ID int identity(1,1) Not Null, Aboneid int, Serino int, Tarihsaat datetime, Operator nvarchar(50), Bilgi nvarchar(100), Gunlukucret nvarchar(50), iadegunu nvarchar(50), Toplamiadeucreti nvarchar(50))", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloBlok (ID int identity(1,1) Not Null, Blokadi nvarchar(50))", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloBorcluListesi (ID int identity(1,1) Not Null, Gecisid int, Plaka nvarchar(50), Giristarihsaati datetime, Kaldigidakika int, Kayiteden nvarchar(50), Tarihsaat datetime, Aciklama nvarchar(255), islemtipi int)", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloClient (ID int identity(1,1) Not Null, Lokasyonid nvarchar(50), Izlenecekkameraid int)", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloCode (ID int identity(1,1) Not Null, Code int, Tr nvarchar(Max), Eng nvarchar(Max))", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloGecis (ID int identity(1,1) Not Null, Plaka nvarchar(50), Tarihsaat datetime, Code int, Kameraid int, Kapitipi int, islemok bit)", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloGecisGruplari (ID int, Grupadi nvarchar(50), Maxaracsayisi int, Bilgi nvarchar(Max), Cikisdatarihselengelyapma bit, Cikisdagunzamankontroluyapma bit, Maxaracasarsaucretlendir bit)", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloGrup (ID int identity(1,1) Not Null, Aktif bit, Grupid int, Kameraid int, Tarihbazligecis bit, Gecisizinli int, Baslangictarihi nvarchar(50), Bitistarihi nvarchar(50), Pazartesi bit, Sali bit, Carsamba bit, Persembe bit, Cuma bit, Cumartesi bit, Pazar bit, Pazartesiilksaat nvarchar(20), Saliilksaat nvarchar(20), Carsambailksaat nvarchar(20), Persembeilksaat nvarchar(20), Cumailksaat nvarchar(20), Cumartesiilksaat nvarchar(20), Pazarilksaat nvarchar(20), Pazartesisonsaat nvarchar(20), Salisonsaat nvarchar(20), Carsambasonsaat nvarchar(20), Persembesonsaat nvarchar(20), Cumasonsaat nvarchar(20), Cumartesisonsaat nvarchar(20), Pazarsonsaat nvarchar(20), iocihaztipi int, Roleno int, iocihazip nvarchar(50), Networkioport nvarchar(50), Networkiolokasyonid nvarchar(50))", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloKameralar (ID int identity(1,1) Not Null, Lokasyonid nvarchar(50), Kameraadi nvarchar(50), Kapitipi int, Okumamodu int, Hassasiyet int, Ocryukseklik int, Ocrgenislik int, Kameraip nvarchar(50), Kamerakullaniciadi nvarchar(50), Kamerasifre nvarchar(50), OnvifRtsp int, Rtspport nvarchar(50), Tus nvarchar(50), Filigranyazi nvarchar(Max), Fotobilgiyazaktif bit, Herkeseacaktif bit, Polnetaktif bit, Misafirgecisiaktif bit, Aracyerivarsaac bit, Fazlagecislerisay bit, iocihaztipi int, Roleno int, iocihazip nvarchar(50), iocihazserino nvarchar(50), Networkioport int, Ledpanoip nvarchar(50), Kapasitegrupid int, Ledkapasiteyaz bit, Ledserino nvarchar(50), Lednetworkport int, Ledsabityazisi nvarchar(Max), Ledonayyazisi nvarchar(Max), Ledaboneyazisi nvarchar(Max), Ledmisafiryazisi nvarchar(Max), Ledengelyazisi nvarchar(Max), Ledyasakliyazisi nvarchar(Max), Ledalarmyazisi nvarchar(Max), Ledotoparkdoluyazisi nvarchar(Max), Ledsurebitmisyazisi nvarchar(Max), Ledtanimsizyazisi nvarchar(Max), Ledgrupkotasidolduyazisi nvarchar(Max), Fazlagecisalarmyazisi nvarchar(Max), Gosterimsuresi int, Locationx int, Locationy int, Kapiacik bit, Videoaktif bit, Video1 nvarchar(Max), Misafirotomatikciksin bit, Loopzamanasimi int, Olaygonderaktif bit, Olayipadres nvarchar(50), Satir1 nvarchar(50), Satir2 nvarchar(50), Satir3 nvarchar(50), Satir4 nvarchar(50), Tanimsizbaslangicsaati nvarchar(50), Tanimsizbitissaati nvarchar(50), Guvenilirlik nvarchar(50), Girisyoksauyariver bit, Girisyoksabariyeriacma bit, Tetikvarsadevamlioku bit, Fisbastir bit, Fisyazicisi text, Fisdizaynkodu int, Fisbasincaotomatikac bit, Denemeex nchar)", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloKapasite (ID int identity(1,1) Not Null, Kapasitegrupid int, Grupadi nvarchar(50), Kapasite int, icerdekiarac int)", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloKaraListe (ID int identity(1,1) Not Null, Plaka nvarchar(50), Adi nvarchar(50), Soyadi nvarchar(50), Sesaktif bit, Duzey nvarchar(Max), Senaryo int, Sebep nvarchar(100), Kayiteden nvarchar(50), Tarihsaat datetime)", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloKarantinaGecis (ID int identity(1,1) Not Null, Plaka nvarchar(50), Adi nvarchar(50), Soyadi nvarchar(50), Duzey nvarchar(50), Senaryo nvarchar(50), Sebep nvarchar(Max), Ses bit, Kameraid int, Tarihsaat datetime)", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloKasa (ID int identity(1,1) Not Null, Plaka nvarchar(50), Kameraid int, Aboneid int, Operator nvarchar(50), Tarihsaat datetime, Odemetipi nvarchar(50), Borc decimal(18,2), Alacak decimal(18,2), Bilgi nvarchar(100), Lokasyon nvarchar(50), Sure nvarchar(150), Tarifeadi nvarchar(50), Formasyon nvarchar(100), Kasaislemtipi int, Aciklama nvarchar(100))", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloMailSms (ID int identity(1,1) Not Null, Lokasyonid nvarchar(50), Baslik nvarchar(100), Aciklama nvarchar(500), Mailgonderilsin bit, Mailgonderildi bit, Smsgonderilsin bit, Smsgonderildi bit, Mailadresleri nvarchar(500), Smsnumaralari nvarchar(500), Smscode int, Lokasyon nvarchar(50), Tarihsaat datetime, Gonderenkullanici nvarchar(50), islemok bit)", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloMisafirGecis (ID int identity(1,1) Not Null, Plaka nvarchar(50), Adi nvarchar(50), Soyadi nvarchar(50), Marka nvarchar(50), Model nvarchar(50), Renk nvarchar(50), Tckimlik nvarchar(50), Aciklama nvarchar(100), Tarihsaat datetime, Cikistarihsaat datetime, Kayiteden nvarchar(50), Gadi nvarchar(50), Gsoyadi nvarchar(50), Gblok nvarchar(50), Gdaire nvarchar(50), Bariyeracildi bit, Kameraid int, Cikisdakikullanici nvarchar(50), Cikiskameraid int, Cikiskameraadi nvarchar(50), Gecisnoktalari nvarchar(50))", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloOperator (ID int identity(1,1) Not Null, Kullaniciadi nvarchar(50), Sifre nvarchar(50), Yetki nvarchar(50), Kamerayetki nvarchar(50), Abonetanimlamacheck bit, Karalistetanimlamacheck bit, Gecisgrubutanimlamacheck bit, Kullanicitanimlamacheck bit, Bloktanimlamacheck bit, Abonearacraporcheck bit, Tanimsizaracraporcheck bit, Abonekayitraporcheck bit, Yasakliaracraporcheck bit, Misafiraracraporcheck bit, Kameratanimlamacheck bit, Sistemayarcheck bit, Databaseayarcheck bit, Sistemlog bit, Kayiteden nvarchar(50), Tarihsaat datetime, Kasaraporucheck bit, Ucretislemiadecheck bit, Tarifetanimlamacheck bit, Abonetarifetanimlama bit, Kasacheck bit, OturumLokasyonID nvarchar(50), Lokasyonadi nvarchar(50), Oturumbaslangic datetime)", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloSistemLog (ID int identity(1,1) Not Null, Kullanici nvarchar(50), Tarihsaat datetime, islem nvarchar(Max), Pcip nvarchar(50), Normalkritik nvarchar(200), Lokasyonadi nvarchar(200))", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
+Sqlkodu = New SqlCommand("Create Table TabloTarife (ID int identity(1,1) Not Null, Tarifeadi nvarchar(50), Baslangicsaat nvarchar(50), Bitissaat nvarchar(50), Fiyat decimal(18,2), Tamgunucreti decimal(18,2), ilk int, Son int, Aracminyukseklik int, Ozeldevirdakika int, Ozeldevirfiyat decimal(18,2), Pazartesi bit, Sali bit, Carsamba bit, Persembe bit, Cuma bit, Cumartesi bit, Pazar bit, Pazartesiilksaat nvarchar(20), Saliilksaat nvarchar(20), Carsambailksaat nvarchar(20), Persembeilksaat nvarchar(20), Cumailksaat nvarchar(20), Cumartesiilksaat nvarchar(20), Pazarilksaat nvarchar(20), Pazartesisonsaat nvarchar(20), Salisonsaat nvarchar(20), Carsambasonsaat nvarchar(20), Persembesonsaat nvarchar(20), Cumasonsaat nvarchar(20), Cumartesisonsaat nvarchar(20), Pazarsonsaat nvarchar(20))", YeniBaglantı)
+Sqlkodu.ExecuteNonQuery()
+
+ 
